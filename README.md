@@ -71,10 +71,13 @@ While the PyTorch-Lightning profiler and Tensorboard logger (included in the not
 |       False      	|       True       	|      12.3k     	|        74.1%        	|          70.86%         	|       4441.7 s      	|     645.08 ms     	|     1039.30 ms     	|    365.49 ms   	|
 |       True       	|       True       	|      12.2k     	|                     	|                         	|                     	|                   	|                    	|                	|
 
+**NOTE**: _The results are subject to change in hyperparameters and training settings. The above results are obtained from the current settings given in the notebook. The results can be increased significantly by training bigger models for longer times._
 
 #### Discussion
-* The **Validation Accuracy** (roughly equal to the Normal Test Accuracy) reflects the **_Expressivity_** of the models towards the COGS task
-* The **Generalization Test Accuracy** (usually lower than Validation and Normal Test Accuracy) reflects the **_Compositional Generalization_** capabilities of the models
+* The **Validation accuracy** (roughly equal to the Normal test accuracy) reflects the **_Expressivity_** of the models towards the COGS task
+    * Access to higher level representations might help in semantic-parsing by allowing top-down processing
+* The **Generalization test accuracy** (usually lower than Validation and Normal test accuracy) reflects the **_Compositional Generalization_** capabilities of the models
+    * This needs accurate inference on previously unseen novel linguistic structures and an ability to maintain a belief state for longer contexts
 
 
 
