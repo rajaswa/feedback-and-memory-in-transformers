@@ -1,7 +1,13 @@
 # Project-22: Feedback and Memory in Transformers
-My final project submission for the Meta Learning course at BITS Goa (conducted by TCS Research & BITS Goa). The project can be run as a colab notebook here:    [![colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rajaswa/feedback-and-memory-in-transformers/blob/main/Feedback_and_Memory_in_Transformers.ipynb)
+My final project submission for the Meta Learning course at BITS Goa (conducted by TCS Research & BITS Goa). The project can be run as a colab notebook [![colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rajaswa/feedback-and-memory-in-transformers/blob/main/Feedback_and_Memory_in_Transformers.ipynb)
 
-## Feedback Transformer Implementation
+## Key Contributions
+The key contributions of this project can be listed as follows:
+1. [Implementing and Open-sourcing a modular customizable Feedback Transformer Model in PyTorch](https://github.com/rajaswa/feedback-and-memory-in-transformers#feedback-transformer-implementation)
+2. [Experimenting the Feedback Transformer Model with COGS Benchmark (Compositional Generalization)](https://github.com/rajaswa/feedback-and-memory-in-transformers#solving-cogs-with-feedback-transformer)
+3. [Implementing the Sequence Copy & Reverse Task from the original Feedback Transformer Paper](https://github.com/rajaswa/feedback-and-memory-in-transformers#solving-cogs-with-feedback-transformer)
+
+### Feedback Transformer Implementation
 The Feedback Transformer Model has been implemented as PyTorch model class in the given notebook. You can adjust the various hyperparameters and turn the feedback ON/OFF in the Encoder and Decoder of the Model independently. Use the model in the following manner:
 ```python
 model = FeedbackTransformerModel(
@@ -20,6 +26,12 @@ model = FeedbackTransformerModel(
             activation = "gelu",        # Model Activation Function: "gelu" / "relu"
     )
 ```
+
+### Solving COGS with Feedback Transformer
+
+
+### Sequence Copy & Reverse Task
+
 
 ## Citations
 If you use the code for Feedback Transfomer or the Sequence Copy & Reverse task, cite the Feedback Transformer paper:
