@@ -5,7 +5,7 @@ My final project submission for the Meta Learning course at BITS Goa (conducted 
 The key contributions of this project can be listed as follows:
 1. [Implementing and Open-sourcing a modular customizable Feedback Transformer Model in PyTorch](https://github.com/rajaswa/feedback-and-memory-in-transformers#feedback-transformer-implementation)
 2. [Experimenting the Feedback Transformer Model with COGS Benchmark (Compositional Generalization)](https://github.com/rajaswa/feedback-and-memory-in-transformers#solving-cogs-with-feedback-transformer)
-3. [Implementing the Sequence Copy & Reverse Task from the original Feedback Transformer Paper](https://github.com/rajaswa/feedback-and-memory-in-transformers#solving-cogs-with-feedback-transformer)
+3. [Implementing the Sequence Copy & Reverse Task from the original Feedback Transformer Paper](https://github.com/rajaswa/feedback-and-memory-in-transformers/blob/main/README.md#sequence-copy--reverse-task)
 
 ### Feedback Transformer Implementation
 The Feedback Transformer Model has been implemented as PyTorch model class in the given notebook. You can adjust the various hyperparameters and turn the feedback ON/OFF in the Encoder and Decoder of the Model independently. Use the model in the following manner:
@@ -27,7 +27,25 @@ model = FeedbackTransformerModel(
     )
 ```
 
+
 ### Solving COGS with Feedback Transformer
+The [COGS Benchmark](https://github.com/najoungkim/COGS) is a benchmark for evaluating **compositional generalization & reasoning** in natural language. The COGS task is that of mapping a **natural language sentence to a lambda-expression based semantic logical form**:
+
+```python
+input_sentence = "The moose wanted to read ."
+output_logical_form = "* moose ( x _ 1 ) ; want . agent ( x _ 2 , x _ 1 ) AND want . xcomp ( x _ 2 , x _ 4 ) AND read . agent ( x _ 4 , x _ 1 )"
+```
+
+This can be treated as a **sequence-to-sequence semantic-parsing** task. What makes this task challenging is its **Generalization test set**. The following points make it quite challenging:
+1. Novel (unseen in training) Combination of Familiar Primitives and Grammatical Roles
+2. Novel (unseen in training) Combination Modified Phrases and Grammatical Roles
+3. Deeper Recursion (results in longer sentences and deeper lingusitic strucutre i.e. parse tree)
+4. Verb Argument Structure Alternation
+5. Verb Class Alteration
+
+You can check the [COGS Paper](https://www.aclweb.org/anthology/2020.emnlp-main.731.pdf) for more details on the benchmark.
+
+**NOTE**: _This is the first attempt (to the best of my knowledge) to inspect the effect of incoroporating feedback and memory based architectural biases in solving compositional generalization problem in natural language._
 
 
 ### Sequence Copy & Reverse Task
