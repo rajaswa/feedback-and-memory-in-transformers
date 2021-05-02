@@ -54,7 +54,21 @@ datamodule = COGSDataModule(
                         use_Gen=True            # Whether to use normal test set or generaliztion test set
             )
 ```
-**NOTE**: _This is the first attempt (to the best of my knowledge) to inspect the effect of incoroporating feedback and memory based architectural biases in solving compositional generalization problem in natural language._
+**NOTE**: _The feedback transformer paper does not include this benchmark or any related task. This is the first attempt (to the best of my knowledge) to inspect the effect of incoroporating feedback and memory based architectural biases in solving compositional generalization problem in natural language._
+
+#### Results
+While the PyTorch-Lightning profiler and Tensorboard logger (included in the notebook) will give a detailed insights into the experiments, here are key metrics to report:
+
+| Encoder Feedback 	| Decoder Feedback 	| Num Parameters 	| Validation Accuracy 	| Generalization Accuracy 	| Total Training time 	| Mean Forward time 	| Mean Backward time 	| Inference time 	|
+|:----------------:	|:----------------:	|:--------------:	|:-------------------:	|:-----------------------:	|:-------------------:	|:-----------------:	|:------------------:	|:--------------:	|
+|       False      	|       False      	|      12.7k     	|        69.5%        	|          65.44%         	|       193.43 s      	|      22.58 ms     	|      25.17 ms      	|    20.08 ms    	|
+|       False      	|       True       	|      12.3k     	|        74.1%        	|          70.86%         	|       4441.7 s      	|     645.08 ms     	|     1039.30 ms     	|    365.49 ms   	|
+|       True       	|       True       	|      12.2k     	|                     	|                         	|                     	|                   	|                    	|                	|
+
+
+#### Discussion
+
+
 
 
 ### Sequence Copy & Reverse Task
