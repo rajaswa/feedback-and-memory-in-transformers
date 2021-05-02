@@ -69,7 +69,8 @@ While the PyTorch-Lightning profiler and Tensorboard logger (included in the not
 |:----------------:	|:----------------:	|:--------------:	|:-------------------:	|:-----------------------:	|:-------------------:	|:-----------------:	|:------------------:	|:--------------:	|
 |       False      	|       False      	|      12.7k     	|        69.5%        	|          65.44%         	|       193.43 s      	|      22.58 ms     	|      25.17 ms      	|    20.08 ms    	|
 |       False      	|       True       	|      12.3k     	|        74.1%        	|          70.86%         	|       4441.7 s      	|     645.08 ms     	|     1039.30 ms     	|    365.49 ms   	|
-|       True       	|       True       	|      12.2k     	|                     	|                         	|                     	|                   	|                    	|                	|
+|       True       	|       True       	|      12.2k     	|        74.4%        	|          70.69%         	|       7402.4 s      	|     701.85 ms     	|      1129.4 ms     	|    404.65 ms   	|
+
 
 **NOTE**: _The results are subject to change in hyperparameters and training settings. The above results are obtained from the current settings given in the notebook. The results can be increased significantly by training bigger models for longer times._
 
