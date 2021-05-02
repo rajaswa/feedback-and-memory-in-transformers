@@ -79,6 +79,7 @@ While the PyTorch-Lightning profiler and Tensorboard logger (included in the not
     * In general, incorporating feedback gives the model **more expressivity** with **lesser number of parameters**
 * The **Generalization test accuracy** (usually lower than Validation and Normal test accuracy) reflects the **_Compositional Generalization_** capabilities of the models
     * This needs accurate inference on previously unseen novel linguistic structures and an ability to maintain a belief state for longer contexts
+    * On an absolute scale, incorporating feedback **increases the Generalization test accuracies** significantly
     * High _Expressivity_ can lead to poor _Compositional Generalization_ in Vanilla Transformer models (as reported in the [COGS Paper](https://www.aclweb.org/anthology/2020.emnlp-main.731.pdf))
     * The Vanilla Transformer model (no feedback) shows a **5.84%** decrease in accuracy between the Validation and Generalization test set
     * Enabling feedback in Decoder reduces the drop in Generalization accuracy to **4.37%**
