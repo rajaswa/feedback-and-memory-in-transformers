@@ -84,8 +84,7 @@ While the PyTorch-Lightning profiler and Tensorboard logger (included in the not
     * High _Expressivity_ can lead to poor _Compositional Generalization_ in Vanilla Transformer models (as reported in the [COGS Paper](https://www.aclweb.org/anthology/2020.emnlp-main.731.pdf))
     * The Vanilla Transformer model (no feedback) shows a **5.84%** decrease in accuracy between the Validation and Generalization test set
     * Enabling feedback in Decoder reduces the drop in Generalization accuracy to **4.37%**
-    * Enabling feedback in Encoder further reduces the the drop in Generalization accuracy to **0.00%**
-
+    * Enabling feedback in Encoder further reduces the the drop in Generalization accuracy to **4.98%**
 
 
 ### Sequence Copy & Reverse Task
