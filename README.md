@@ -5,7 +5,7 @@ My final project submission for the Meta Learning course at BITS Goa (conducted 
 3. Perform a learnable wieghted combined top-down and bottom-up processing
 4. Decrease compute memory-consumption at inference
 
-The project can be run as a colab notebook [![colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rajaswa/feedback-and-memory-in-transformers/blob/main/Feedback_and_Memory_in_Transformers.ipynb) , where the approach given in the paper can be understood in more detail through experimentation.
+The project can be run as a colab notebook [![colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rajaswa/feedback-and-memory-in-transformers/blob/main/Feedback_and_Memory_in_Transformers.ipynb) , where the approach given in the paper can be understood in more detail through experimentation. The experiments' Tensorboard logs and a video explanation for the notebook can be found [**here**](https://drive.google.com/drive/folders/1Py81M90OgvPynZZZ78El4rBzuamu6A7d?usp=sharing).
 
 ## Key Contributions
 The key contributions of this project can be listed as follows:
