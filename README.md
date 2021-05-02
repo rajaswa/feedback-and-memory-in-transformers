@@ -1,5 +1,5 @@
 # Project-22: Feedback and Memory in Transformers
-My final project submission for the Meta Learning course at BITS Goa (conducted by TCS Research & BITS Goa). The project can be run as a colab notebook [![colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rajaswa/feedback-and-memory-in-transformers/blob/main/Feedback_and_Memory_in_Transformers.ipynb)
+My final project submission for the Meta Learning course at BITS Goa (conducted by TCS Research & BITS Goa). The project is based on the [Feedback Transformer paper](https://arxiv.org/abs/2002.09402). The project can be run as a colab notebook [![colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rajaswa/feedback-and-memory-in-transformers/blob/main/Feedback_and_Memory_in_Transformers.ipynb)
 
 ## Key Contributions
 The key contributions of this project can be listed as follows:
@@ -45,11 +45,35 @@ This can be treated as a **sequence-to-sequence semantic-parsing** task. What ma
 
 You can check the [COGS Paper](https://www.aclweb.org/anthology/2020.emnlp-main.731.pdf) for more details on the benchmark.
 
+The COGS dataset can be loaded as a PyTorch-Lightning Module in the following manner:
+```python
+datamodule = COGSDataModule(
+                        batch_size=128,         # Batch Size for Training 
+                        num_workers=2,          # Number of workers for Data Loading
+                        use_100=False,          # Whether to use single-exposure or hundred-exposures for pimitives in the training set
+                        use_Gen=True            # Whether to use normal test set or generaliztion test set
+            )
+```
 **NOTE**: _This is the first attempt (to the best of my knowledge) to inspect the effect of incoroporating feedback and memory based architectural biases in solving compositional generalization problem in natural language._
 
 
 ### Sequence Copy & Reverse Task
+The Sequence Copy & Reverse task is included in the [Feedback Transformer paper](https://arxiv.org/abs/2002.09402) as an Algorithmic task to test the role of memory in long-sequence processing. Since the official dataset is not publicly available, we generate the dataset synthetically. 
 
+The sequence copy & reverse dataset can be loaded as a PyTorch-Lightning Module in the following manner:
+```python
+datamodule = SequenceCopyDataModule(
+    batch_size=64,                  # Batch Size for Training
+    num_workers=2,                  # Number of workers for Data Loading
+    num_samples_train=10000,        # Number of samples to generate for training set
+    num_samples_eval=1000,          # Number of samples to generate for validation and test set
+    max_length_train=10,            # Sequence length in training samples
+    max_length_eval=50,             # Sequence length in evaluation samples (Should be significantly longer to test for memory effect)
+    reverse=True,                   # Whether to Copy the Input Sequence or Reverse the Input Sequence
+)
+```
+
+**NOTE**: _The ablation analysis for this task with Feedback Transformer is still in progress. But you can train the Feedback Transformer on this task using the last section of the project colab notebook._
 
 ## Citations
 If you use the code for Feedback Transfomer or the Sequence Copy & Reverse task, cite the Feedback Transformer paper:
