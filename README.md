@@ -76,8 +76,20 @@ datamodule = SequenceCopyDataModule(
 **NOTE**: _The ablation analysis for this task with Feedback Transformer is still in progress. But you can train the Feedback Transformer on this task using the last section of the project colab notebook._
 
 ## Citations
-If you use the code for Feedback Transfomer or the Sequence Copy & Reverse task, cite the Feedback Transformer paper:
+If you use the code in this repository in any manner, cite the repository:
+```python
+@misc{patil2021-feedback-github,
+    author       = {Rajaswa Patil},
+    title        = {feedback-and-memory-in-transformers},
+    month        = apr,
+    year         = 2021,
+    publisher    = {Github},
+    url          = "https://github.com/rajaswa/feedback-and-memory-in-transformers"
+    }
 ```
+
+If you use the code for Feedback Transfomer or the Sequence Copy & Reverse task, cite the Feedback Transformer paper:
+```python 
 @misc{fan2021addressing,
       title={Addressing Some Limitations of Transformers with Feedback Memory}, 
       author={Angela Fan and Thibaut Lavril and Edouard Grave and Armand Joulin and Sainbayar Sukhbaatar},
@@ -89,7 +101,7 @@ If you use the code for Feedback Transfomer or the Sequence Copy & Reverse task,
 ```
 
 If you use the code from COGS Benchmark data processing and loading, cite the COGS paper:
-```
+```python
 @inproceedings{kim-linzen-2020-cogs,
     title = "{COGS}: A Compositional Generalization Challenge Based on Semantic Interpretation",
     author = "Kim, Najoung  and
