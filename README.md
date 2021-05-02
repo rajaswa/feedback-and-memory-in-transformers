@@ -1,5 +1,5 @@
-# feedback-and-memory-in-transformers
-My final project submission for the Meta Learning course at BITS Goa (conducted by TCS Research & BITS Goa)
+# Project-22: Feedback and Memory in Transformers
+My final project submission for the Meta Learning course at BITS Goa (conducted by TCS Research & BITS Goa). The project can be run as a colab notebook here:    [![colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rajaswa/feedback-and-memory-in-transformers/blob/main/Feedback_and_Memory_in_Transformers.ipynb)
 
 ## Feedback Transformer Implementation
 The Feedback Transformer Model has been implemented as PyTorch model class in the given notebook. You can adjust the various hyperparameters and turn the feedback ON/OFF in the Encoder and Decoder of the Model independently. Use the model in the following manner:
@@ -21,8 +21,8 @@ model = FeedbackTransformerModel(
     )
 ```
 
-## Citation
-If you use this code, cite the original paper:
+## Citations
+If you use the code for Feedback Transfomer or the Sequence Copy & Reverse task, cite the Feedback Transformer paper:
 ```
 @misc{fan2021addressing,
       title={Addressing Some Limitations of Transformers with Feedback Memory}, 
@@ -31,6 +31,24 @@ If you use this code, cite the original paper:
       eprint={2002.09402},
       archivePrefix={arXiv},
       primaryClass={cs.LG}
+}
+```
+
+If you use the code from COGS Benchmark data processing and loading, cite the COGS paper:
+```
+@inproceedings{kim-linzen-2020-cogs,
+    title = "{COGS}: A Compositional Generalization Challenge Based on Semantic Interpretation",
+    author = "Kim, Najoung  and
+      Linzen, Tal",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.emnlp-main.731",
+    doi = "10.18653/v1/2020.emnlp-main.731",
+    pages = "9087--9105",
+    abstract = "Natural language is characterized by compositionality: the meaning of a complex expression is constructed from the meanings of its constituent parts. To facilitate the evaluation of the compositional abilities of language processing architectures, we introduce COGS, a semantic parsing dataset based on a fragment of English. The evaluation portion of COGS contains multiple systematic gaps that can only be addressed by compositional generalization; these include new combinations of familiar syntactic structures, or new combinations of familiar words and familiar structures. In experiments with Transformers and LSTMs, we found that in-distribution accuracy on the COGS test set was near-perfect (96{--}99{\%}), but generalization accuracy was substantially lower (16{--}35{\%}) and showed high sensitivity to random seed (+-6{--}8{\%}). These findings indicate that contemporary standard NLP models are limited in their compositional generalization capacity, and position COGS as a good way to measure progress.",
 }
 ```
 
