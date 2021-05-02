@@ -1,5 +1,11 @@
 # Project-22: Feedback and Memory in Transformers
-My final project submission for the Meta Learning course at BITS Goa (conducted by TCS Research & BITS Goa). The project is based on the [Feedback Transformer paper](https://arxiv.org/abs/2002.09402). The project can be run as a colab notebook [![colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rajaswa/feedback-and-memory-in-transformers/blob/main/Feedback_and_Memory_in_Transformers.ipynb)
+My final project submission for the Meta Learning course at BITS Goa (conducted by TCS Research & BITS Goa). The project is based on the [Feedback Transformer paper](https://arxiv.org/abs/2002.09402). The paper introduces a feedback mechanism in transformer models by adding a recurrent memory-attention based approach. This helps the transformer model in:
+1. Accessing higher level (layers) representations
+2. Maintaining a belief state
+3. Perform a learnable wieghted combined top-down and bottom-up processing
+4. Decrease compute memory-consumption at inference
+
+The project can be run as a colab notebook [![colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rajaswa/feedback-and-memory-in-transformers/blob/main/Feedback_and_Memory_in_Transformers.ipynb) , where the approach given in the paper can be understood in more detail through experimentation.
 
 ## Key Contributions
 The key contributions of this project can be listed as follows:
