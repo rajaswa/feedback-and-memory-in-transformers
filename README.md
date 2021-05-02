@@ -73,7 +73,8 @@ While the PyTorch-Lightning profiler and Tensorboard logger (included in the not
 
 
 #### Discussion
-
+* The **Validation Accuracy** (roughly equal to the Normal Test Accuracy) reflects the **_Expressivity_** of the models towards the COGS task
+* The **Generalization Test Accuracy** (usually lower than Validation and Normal Test Accuracy) reflects the **_Compositional Generalization_** capabilities of the models
 
 
 
@@ -93,7 +94,7 @@ datamodule = SequenceCopyDataModule(
 )
 ```
 
-**NOTE**: _The ablation analysis for this task with Feedback Transformer is still in progress. But you can train the Feedback Transformer on this task using the last section of the project colab notebook._
+**NOTE**: _The ablation analysis for this task with Feedback Transformer is still in progress. One can still train the Feedback Transformer for this task using the last section of the project's colab notebook._
 
 ## Citations
 If you use the code in this repository in any manner, cite the repository:
