@@ -1,5 +1,5 @@
 # Project-22: Feedback and Memory in Transformers
-My final project submission for the Meta Learning course at BITS Goa (conducted by TCS Research & BITS Goa). The project is based on the [Feedback Transformer paper](https://arxiv.org/abs/2002.09402). The paper introduces a feedback mechanism in transformer models by adding a recurrent memory-attention based approach. This helps the transformer model in:
+My final project submission for the [Meta Learning](https://sites.google.com/view/meta-learning-2021/home) course at [BITS Goa](https://www.bits-pilani.ac.in/goa/) (conducted by [TCS Research](https://www.tcs.com/tcs-research) & BITS Goa). The project is based on the [Feedback Transformer paper](https://arxiv.org/abs/2002.09402). The paper introduces a feedback mechanism in transformer models by adding a recurrent memory-attention based approach. This helps the transformer model in:
 1. Accessing higher level (layers) representations
 2. Maintaining a belief state
 3. Perform a learnable wieghted combined top-down and bottom-up processing
